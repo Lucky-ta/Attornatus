@@ -1,5 +1,6 @@
 package br.com.lucas.attornatus.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -39,5 +40,11 @@ public class ClientController {
             existingClient.setBirthdate(client.getBirthdate());
         }
         return clientRepository.save(existingClient);
+    }
+
+    @GetMapping("user/{id}")
+    public Client getClient(@PathVariable Long id) {
+        Client existingClient = clientRepository.findById(id).get();
+        return existingClient;
     }
 }
