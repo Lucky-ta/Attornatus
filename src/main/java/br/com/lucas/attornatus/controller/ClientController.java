@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,9 +44,15 @@ public class ClientController {
         return clientRepository.save(existingClient);
     }
 
-    @GetMapping("user/{id}")
+    @GetMapping("/user/{id}")
     public Client getClient(@PathVariable Long id) {
         Client existingClient = clientRepository.findById(id).get();
         return existingClient;
+    }
+
+    @GetMapping("/user")
+    public List<Client> getAllClients() {
+        List<Client> existingClients = clientRepository.findAll();
+        return existingClients;
     }
 }
