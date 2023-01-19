@@ -147,7 +147,7 @@ public class AttornatusApplicationTests {
 		Integer testNumber = 30;
 		String testCity = "New York";
 		Boolean testMainAddress = true;
-		Address address = new Address(testStreet, testZip, testNumber, testCity, testMainAddress);
+		Address address = new Address(testStreet, testZip, testNumber, testCity, testMainAddress, 1L);
 
 		ObjectMapper mapper = new ObjectMapper();
 		byte[] jsonContent = mapper.writeValueAsBytes(address);
@@ -168,5 +168,33 @@ public class AttornatusApplicationTests {
 		assertEquals(testNumber, createdAddress.getNumber());
 		assertEquals(testCity, createdAddress.getCity());
 		assertEquals(testMainAddress, createdAddress.getMainAddress());
+	}
+
+	@Test
+	public void testGetAddressById() throws Exception {
+		long testAddressId = 1L;
+		String testStreet = "123 Main St";
+		String testZip = "10001";
+		Integer testNumber = 30;
+		String testCity = "New York";
+		Boolean testMainAddress = true;
+		
+		Address address = new Address(testStreet, testZip, testNumber, testCity, testMainAddress, testAddressId);
+
+		when(addressRepository.findById(testAddressId)).thenReturn(Optional.of(address));
+
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/address/{id}", testAddressId))
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andReturn();
+
+		String jsonResponse = result.getResponse().getContentAsString();
+		Address returnedAddress = new ObjectMapper().readValue(jsonResponse, Address.class);
+
+		assertEquals(testAddressId, returnedAddress.getId());
+		assertEquals(testStreet, returnedAddress.getStreet());
+		assertEquals(testZip, returnedAddress.getZipcode());
+		assertEquals(testNumber, returnedAddress.getNumber());
+		assertEquals(testCity, returnedAddress.getCity());
+		assertEquals(testMainAddress, returnedAddress.getMainAddress());
 	}
 }

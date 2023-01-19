@@ -48,12 +48,13 @@ public class Address {
     }
 
     public Address(String street, String zipcode,
-            Integer number, String city, Boolean mainAddress) {
+            Integer number, String city, Boolean mainAddress, long testAddressId) {
         this.street = street;
         this.zipcode = zipcode;
         this.number = number;
         this.city = city;
         this.mainAddress = mainAddress;
+        this.id = testAddressId;
     }
 
     // getters and setters, constructors
