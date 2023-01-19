@@ -3,6 +3,7 @@ package br.com.lucas.attornatus.controller;
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,4 +46,11 @@ public class AddressController {
                 .toUri();
         return ResponseEntity.created(location).body(newAddress);
     }
+
+    @GetMapping("/user/address/{id}")
+    public Address getUserAddress(@PathVariable Long id) {
+        Address existingAddress = addressRepository.findById(id).get();
+        return existingAddress;
+    }
+
 }
