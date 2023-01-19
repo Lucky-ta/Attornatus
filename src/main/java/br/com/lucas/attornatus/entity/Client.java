@@ -1,6 +1,5 @@
 package br.com.lucas.attornatus.entity;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -26,14 +25,17 @@ public class Client {
     private String name;
 
     @Column(name = "birthdate")
-    @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @NonNull
-    private LocalDate birthdate;
+    private String birthdate;
 
     @JsonIgnore
     @OneToMany(mappedBy = "client",cascade = CascadeType.ALL)
     private List<Address> addresses = new ArrayList<>();
 
+    public Client(String name, String birthdate) {
+        this.name = name;
+        this.birthdate = birthdate;
+    }
     // getters and setters, constructors
 }
