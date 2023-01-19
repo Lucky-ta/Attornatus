@@ -20,19 +20,19 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/")
+@RequestMapping("/client")
 public class ClientController {
 
     @Autowired
     private ClientRepository clientRepository;
 
-    @PostMapping("/user")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Client salvar(@RequestBody Client user) {
+    public Client createClient(@RequestBody Client user) {
         return clientRepository.save(user);
     }
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/{id}")
     public Client updateClient(@PathVariable Long id, @RequestBody Client client) {
         Client existingClient = clientRepository.findById(id).get();
         if (client.getName() != null) {
@@ -44,13 +44,13 @@ public class ClientController {
         return clientRepository.save(existingClient);
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/{id}")
     public Client getClient(@PathVariable Long id) {
         Client existingClient = clientRepository.findById(id).get();
         return existingClient;
     }
 
-    @GetMapping("/user")
+    @GetMapping
     public List<Client> getAllClients() {
         List<Client> existingClients = clientRepository.findAll();
         return existingClients;

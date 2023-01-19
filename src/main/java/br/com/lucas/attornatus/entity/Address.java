@@ -1,6 +1,5 @@
 package br.com.lucas.attornatus.entity;
 
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,8 +43,8 @@ public class Address {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    public void setClient(Client pessoa) {
-        this.client = pessoa;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public Client getClient() {

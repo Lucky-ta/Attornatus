@@ -32,22 +32,23 @@ public class AddressController {
     @Autowired
     private ClientRepository clientRepository;
 
-    @PostMapping("/user/{id}")
+    @PostMapping("/client/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Address> createAddress(@PathVariable Long id, @RequestBody Address address) {
         Client client = clientRepository.findById(id).get();
         address.setClient(client);
-
         Address newAddress = addressRepository.save(address);
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(newAddress.getId())
                 .toUri();
+
         return ResponseEntity.created(location).body(newAddress);
     }
 
-    @GetMapping("/user/address/{id}")
+    @GetMapping("/{id}")
     public Address getUserAddress(@PathVariable Long id) {
         Address existingAddress = addressRepository.findById(id).get();
         return existingAddress;
