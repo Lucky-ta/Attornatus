@@ -1,12 +1,16 @@
 package br.com.lucas.attornatus.entity;
 
 import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @AllArgsConstructor
@@ -21,11 +25,14 @@ public class Client {
     private Long id;
 
     @Column(name = "name")
+    @NotBlank(message = "Name is required")
+    @Size(min = 3)
     @NonNull
     private String name;
 
     @Column(name = "birthdate")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @NotBlank(message = "Birth date is required")
     @NonNull
     private String birthdate;
 

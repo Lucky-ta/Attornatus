@@ -1,7 +1,7 @@
 package br.com.lucas.attornatus.entity;
 
 import jakarta.persistence.*;
-
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @AllArgsConstructor
@@ -17,22 +17,27 @@ public class Address {
 
     @Column(name = "street")
     @NonNull
+    @NotBlank(message = "street is required")
     private String street;
 
     @Column(name = "zipcode")
     @NonNull
+    @NotBlank(message = "zip code is required")
     private String zipcode;
 
     @Column(name = "number")
     @NonNull
+    @NotBlank(message = "number is required")
     private Integer number;
 
     @Column(name = "city")
     @NonNull
+    @NotBlank(message = "city is required")
     private String city;
 
     @Column(name = "main_address")
     @NonNull
+    @NotBlank(message = "main address is required")
     private Boolean mainAddress;
 
     @ManyToOne(cascade = CascadeType.ALL)
