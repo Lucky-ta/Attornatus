@@ -1,17 +1,8 @@
 package br.com.lucas.attornatus.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,20 +16,25 @@ public class Address {
     private Long id;
 
     @Column(name = "street")
+    @NonNull
     private String street;
 
     @Column(name = "zipcode")
+    @NonNull
     private String zipcode;
 
     @Column(name = "number")
+    @NonNull
     private Integer number;
 
     @Column(name = "city")
+    @NonNull
     private String city;
 
     @Column(name = "main_address")
+    @NonNull
     private Boolean mainAddress;
-    
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id")
     private Client client;

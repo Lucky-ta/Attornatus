@@ -19608,3 +19608,32 @@ java.lang.NullPointerException: birthdate is marked non-null but is null
 2023-01-18T21:12:02.279-03:00  INFO 20628 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2023-01-18T21:12:02.478-03:00  INFO 20628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-01-18T21:12:02.484-03:00  INFO 20628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-18T21:17:46.505-03:00  INFO 6436 --- [main] b.c.l.attornatus.AttornatusApplication   : Starting AttornatusApplication using Java 19.0.2 with PID 6436 (C:\development\Java\target\classes started by lucas in C:\development\Java)
+2023-01-18T21:17:46.509-03:00  INFO 6436 --- [main] b.c.l.attornatus.AttornatusApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-01-18T21:17:47.260-03:00  INFO 6436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-18T21:17:47.340-03:00  INFO 6436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2023-01-18T21:17:48.084-03:00  INFO 6436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-18T21:17:48.100-03:00  INFO 6436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-18T21:17:48.101-03:00  INFO 6436 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18T21:17:48.235-03:00  INFO 6436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-18T21:17:48.237-03:00  INFO 6436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1663 ms
+2023-01-18T21:17:48.288-03:00  INFO 6436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-18T21:17:48.579-03:00  INFO 6436 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-18T21:17:48.582-03:00  INFO 6436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-18T21:17:48.603-03:00  INFO 6436 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-18T21:17:48.773-03:00  INFO 6436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-18T21:17:48.846-03:00  INFO 6436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-18T21:17:49.075-03:00  WARN 6436 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-18T21:17:49.264-03:00  INFO 6436 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-18T21:17:50.455-03:00  INFO 6436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-18T21:17:50.481-03:00  INFO 6436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18T21:17:50.906-03:00  WARN 6436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-18T21:17:51.338-03:00  INFO 6436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-18T21:17:51.350-03:00  INFO 6436 --- [main] b.c.l.attornatus.AttornatusApplication   : Started AttornatusApplication in 5.475 seconds (process running for 5.979)
+2023-01-18T21:17:56.882-03:00  INFO 6436 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-18T21:17:56.884-03:00  INFO 6436 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-18T21:17:56.886-03:00  INFO 6436 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-18T21:31:24.603-03:00  INFO 6436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18T21:31:24.605-03:00  INFO 6436 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-18T21:31:24.777-03:00  INFO 6436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-18T21:31:24.787-03:00  INFO 6436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
