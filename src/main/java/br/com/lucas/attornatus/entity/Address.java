@@ -47,5 +47,14 @@ public class Address {
         return client;
     }
 
+    public Address(String street, String zipcode,
+            Integer number, String city, Boolean mainAddress) {
+        this.street = street;
+        this.zipcode = zipcode;
+        this.number = number;
+        this.city = city;
+        this.mainAddress = mainAddress;
+    }
+
     // getters and setters, constructors
 }

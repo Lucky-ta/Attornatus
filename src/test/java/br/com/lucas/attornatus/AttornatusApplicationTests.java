@@ -25,7 +25,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import br.com.lucas.attornatus.entity.Address;
 import br.com.lucas.attornatus.entity.Client;
+import br.com.lucas.attornatus.repository.AddressRepository;
 import br.com.lucas.attornatus.repository.ClientRepository;
 
 @SpringBootTest
@@ -38,6 +40,9 @@ public class AttornatusApplicationTests {
 
 	@MockBean
 	private ClientRepository clientRepository;
+
+	@MockBean
+	private AddressRepository addressRepository;
 
 	@Test
 	public void testCreateClient() throws Exception {
@@ -130,5 +135,38 @@ public class AttornatusApplicationTests {
 
 		assertEquals(updatedClient.getName(), returnedClient.getName());
 		assertEquals(updatedClient.getBirthdate(), returnedClient.getBirthdate());
+	}
+
+	@Test
+	public void testCreateAddress() throws Exception {
+		Client testClient = new Client("Lucas", "22-07-2001");
+		when(clientRepository.findById(1L)).thenReturn(Optional.of(testClient));
+
+		String testStreet = "123 Main St";
+		String testZip = "10001";
+		Integer testNumber = 30;
+		String testCity = "New York";
+		Boolean testMainAddress = true;
+		Address address = new Address(testStreet, testZip, testNumber, testCity, testMainAddress);
+
+		ObjectMapper mapper = new ObjectMapper();
+		byte[] jsonContent = mapper.writeValueAsBytes(address);
+
+		when(addressRepository.save(any(Address.class))).thenReturn(address);
+
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.post("/address/client/1")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(jsonContent))
+				.andExpect(MockMvcResultMatchers.status().isCreated())
+				.andReturn();
+
+		String jsonResponse = result.getResponse().getContentAsString();
+		Address createdAddress = mapper.readValue(jsonResponse, Address.class);
+
+		assertEquals(testStreet, createdAddress.getStreet());
+		assertEquals(testZip, createdAddress.getZipcode());
+		assertEquals(testNumber, createdAddress.getNumber());
+		assertEquals(testCity, createdAddress.getCity());
+		assertEquals(testMainAddress, createdAddress.getMainAddress());
 	}
 }
