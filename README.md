@@ -7,14 +7,18 @@ Qualidade de código:
 quais critérios você avalia e implementa para garantia de qualidade de software?
 
    ```
-   RESPOSTA AQUI
+   São alguns critérios que levo em consideração ao implementar/criar um software, alguns deles são:
+   - Escrever testes bem estruturados e que garantem a confiabilidade do projeto.
+   - Escrever a documentação de modo a ser facilmente compreendida para que o usuário ou outro desenvolvedor possa entender.
+   - Boas praticas de programação, como padronização de variáveis, clean code, identação padronizada do código e a separação de funcionalidades.
    ```
 
 
 2 - Em qual etapa da implementação você considera a qualidade de software?
 
    ```
-   RESPOSTA AQUI
+   Considero a qualidade de software em todas as etapas da implementação, desde a análise dos requisitos até a escrita da documentação.
+   Assim eu garanto que o software vai estar bem estrturado seguindo as boas práticas de software.
    ```
    
    
