@@ -595,3 +595,172 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2023-01-19T01:44:02.644-03:00  INFO 11452 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2023-01-19T01:44:02.848-03:00  INFO 11452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-01-19T01:44:02.857-03:00  INFO 11452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:37:26.362-03:00  INFO 9964 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 9964 (started by lucas in C:\development\Java)
+2023-01-19T13:37:26.371-03:00  INFO 9964 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:37:27.388-03:00  INFO 9964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:37:27.506-03:00  INFO 9964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:37:29.193-03:00  INFO 9964 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:37:29.290-03:00  INFO 9964 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:37:29.380-03:00  WARN 9964 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:37:29.690-03:00  INFO 9964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:37:30.024-03:00  INFO 9964 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:37:30.040-03:00  INFO 9964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:37:30.078-03:00  INFO 9964 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:37:31.210-03:00  INFO 9964 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:37:31.228-03:00  INFO 9964 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:37:31.991-03:00  WARN 9964 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:37:32.451-03:00  INFO 9964 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:37:32.528-03:00  INFO 9964 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:37:32.529-03:00  INFO 9964 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:37:32.531-03:00  INFO 9964 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-19T13:37:32.615-03:00  INFO 9964 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.781 seconds (process running for 8.598)
+2023-01-19T13:37:32.880-03:00  WARN 9964 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public br.com.lucas.attornatus.entity.Client br.com.lucas.attornatus.controller.ClientController.createClient(br.com.lucas.attornatus.entity.Client)]
+2023-01-19T13:37:33.003-03:00  INFO 9964 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:37:33.005-03:00  INFO 9964 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:37:33.217-03:00  INFO 9964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:37:33.224-03:00  INFO 9964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:39:10.116-03:00  INFO 19448 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 19448 (started by lucas in C:\development\Java)
+2023-01-19T13:39:10.118-03:00  INFO 19448 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:39:11.086-03:00  INFO 19448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:39:11.170-03:00  INFO 19448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:39:12.870-03:00  INFO 19448 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:39:12.968-03:00  INFO 19448 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:39:13.051-03:00  WARN 19448 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:39:13.370-03:00  INFO 19448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:39:13.709-03:00  INFO 19448 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:39:13.717-03:00  INFO 19448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:39:13.773-03:00  INFO 19448 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:39:14.877-03:00  INFO 19448 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:39:14.898-03:00  INFO 19448 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:39:15.564-03:00  WARN 19448 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:39:16.155-03:00  INFO 19448 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:39:16.229-03:00  INFO 19448 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:39:16.230-03:00  INFO 19448 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:39:16.232-03:00  INFO 19448 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-19T13:39:16.292-03:00  INFO 19448 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.741 seconds (process running for 8.309)
+2023-01-19T13:39:16.552-03:00  WARN 19448 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public br.com.lucas.attornatus.entity.Client br.com.lucas.attornatus.controller.ClientController.createClient(br.com.lucas.attornatus.entity.Client)]
+2023-01-19T13:39:16.697-03:00  INFO 19448 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:39:16.699-03:00  INFO 19448 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:39:16.914-03:00  INFO 19448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:39:16.924-03:00  INFO 19448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:44:45.825-03:00  INFO 16112 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 16112 (started by lucas in C:\development\Java)
+2023-01-19T13:44:45.825-03:00  INFO 16112 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:44:46.812-03:00  INFO 16112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:44:46.917-03:00  INFO 16112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:44:48.599-03:00  INFO 16112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:44:48.690-03:00  INFO 16112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:44:48.765-03:00  WARN 16112 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:44:49.063-03:00  INFO 16112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:44:49.373-03:00  INFO 16112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:44:49.394-03:00  INFO 16112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:44:49.440-03:00  INFO 16112 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:44:50.588-03:00  INFO 16112 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:44:50.607-03:00  INFO 16112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:44:51.284-03:00  WARN 16112 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:44:51.778-03:00  INFO 16112 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:44:51.859-03:00  INFO 16112 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:44:51.859-03:00  INFO 16112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:44:51.859-03:00  INFO 16112 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-01-19T13:44:51.911-03:00  INFO 16112 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.591 seconds (process running for 8.099)
+2023-01-19T13:44:52.351-03:00  INFO 16112 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:44:52.353-03:00  INFO 16112 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:44:52.549-03:00  INFO 16112 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:44:52.565-03:00  INFO 16112 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:47:23.324-03:00  INFO 12240 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 12240 (started by lucas in C:\development\Java)
+2023-01-19T13:47:23.324-03:00  INFO 12240 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:47:24.286-03:00  INFO 12240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:47:24.385-03:00  INFO 12240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:47:25.997-03:00  INFO 12240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:47:26.118-03:00  INFO 12240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:47:26.198-03:00  WARN 12240 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:47:26.491-03:00  INFO 12240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:47:26.838-03:00  INFO 12240 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:47:26.857-03:00  INFO 12240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:47:26.913-03:00  INFO 12240 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:47:28.089-03:00  INFO 12240 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:47:28.106-03:00  INFO 12240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:47:28.779-03:00  WARN 12240 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:47:29.298-03:00  INFO 12240 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:47:29.376-03:00  INFO 12240 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:47:29.377-03:00  INFO 12240 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:47:29.380-03:00  INFO 12240 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-19T13:47:29.415-03:00  INFO 12240 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.612 seconds (process running for 8.236)
+2023-01-19T13:47:29.681-03:00  WARN 12240 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public br.com.lucas.attornatus.entity.Client br.com.lucas.attornatus.controller.ClientController.createClient(br.com.lucas.attornatus.entity.Client)]
+2023-01-19T13:47:29.795-03:00  INFO 12240 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:47:29.797-03:00  INFO 12240 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:47:29.813-03:00  WARN 12240 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-01-19T13:47:29.813-03:00 ERROR 12240 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-01-19T13:47:29.815-03:00  WARN 12240 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-01-19T13:47:29.816-03:00 ERROR 12240 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-01-19T13:47:29.818-03:00  WARN 12240 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2023-01-19T13:47:29.819-03:00  INFO 12240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:47:29.823-03:00  INFO 12240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:53:00.424-03:00  INFO 5128 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 5128 (started by lucas in C:\development\Java)
+2023-01-19T13:53:00.428-03:00  INFO 5128 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:53:01.420-03:00  INFO 5128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:53:01.523-03:00  INFO 5128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:53:03.211-03:00  INFO 5128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:53:03.291-03:00  INFO 5128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:53:03.387-03:00  WARN 5128 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:53:03.705-03:00  INFO 5128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:53:04.065-03:00  INFO 5128 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:53:04.077-03:00  INFO 5128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:53:04.117-03:00  INFO 5128 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:53:05.243-03:00  INFO 5128 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:53:05.261-03:00  INFO 5128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:53:05.946-03:00  WARN 5128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:53:06.453-03:00  INFO 5128 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:53:06.530-03:00  INFO 5128 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:53:06.531-03:00  INFO 5128 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:53:06.533-03:00  INFO 5128 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-19T13:53:06.566-03:00  INFO 5128 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.635 seconds (process running for 8.307)
+2023-01-19T13:53:06.986-03:00  INFO 5128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:53:06.990-03:00  INFO 5128 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:53:07.199-03:00  INFO 5128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:53:07.208-03:00  INFO 5128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:53:20.943-03:00  INFO 12344 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 12344 (started by lucas in C:\development\Java)
+2023-01-19T13:53:20.946-03:00  INFO 12344 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:53:21.964-03:00  INFO 12344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:53:22.074-03:00  INFO 12344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:53:23.733-03:00  INFO 12344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:53:23.824-03:00  INFO 12344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:53:23.925-03:00  WARN 12344 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:53:24.250-03:00  INFO 12344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:53:24.560-03:00  INFO 12344 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:53:24.570-03:00  INFO 12344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:53:24.610-03:00  INFO 12344 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:53:25.761-03:00  INFO 12344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:53:25.780-03:00  INFO 12344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:53:26.477-03:00  WARN 12344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:53:26.984-03:00  INFO 12344 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:53:27.073-03:00  INFO 12344 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:53:27.073-03:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:53:27.082-03:00  INFO 12344 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2023-01-19T13:53:27.117-03:00  INFO 12344 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.688 seconds (process running for 8.23)
+2023-01-19T13:53:27.513-03:00  INFO 12344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:53:27.515-03:00  INFO 12344 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:53:27.732-03:00  INFO 12344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:53:27.739-03:00  INFO 12344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-19T13:54:00.299-03:00  INFO 1756 --- [main] b.c.l.a.AttornatusApplicationTests       : Starting AttornatusApplicationTests using Java 19.0.2 with PID 1756 (started by lucas in C:\development\Java)
+2023-01-19T13:54:00.302-03:00  INFO 1756 --- [main] b.c.l.a.AttornatusApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-19T13:54:01.356-03:00  INFO 1756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-19T13:54:01.455-03:00  INFO 1756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2023-01-19T13:54:03.069-03:00  INFO 1756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-19T13:54:03.177-03:00  INFO 1756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-19T13:54:03.258-03:00  WARN 1756 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-19T13:54:03.587-03:00  INFO 1756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-19T13:54:03.906-03:00  INFO 1756 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:memDb user=SA
+2023-01-19T13:54:03.910-03:00  INFO 1756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-19T13:54:03.966-03:00  INFO 1756 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-19T13:54:05.101-03:00  INFO 1756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-19T13:54:05.117-03:00  INFO 1756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:54:05.795-03:00  WARN 1756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-19T13:54:06.319-03:00  INFO 1756 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:memDb'
+2023-01-19T13:54:06.415-03:00  INFO 1756 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-19T13:54:06.416-03:00  INFO 1756 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-19T13:54:06.418-03:00  INFO 1756 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-19T13:54:06.516-03:00  INFO 1756 --- [main] b.c.l.a.AttornatusApplicationTests       : Started AttornatusApplicationTests in 6.828 seconds (process running for 8.332)
+2023-01-19T13:54:06.914-03:00  INFO 1756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-19T13:54:06.917-03:00  INFO 1756 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-19T13:54:07.133-03:00  INFO 1756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-19T13:54:07.143-03:00  INFO 1756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

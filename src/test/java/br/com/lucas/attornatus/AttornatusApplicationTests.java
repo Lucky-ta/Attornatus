@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 
@@ -56,5 +58,28 @@ public class AttornatusApplicationTests {
 
 		assertEquals("Lucas", createdClient.getName());
 		assertEquals("22-07-2001", createdClient.getBirthdate());
+	}
+
+	@Test
+	public void testGetClientById() throws Exception {
+		String testClientName = "Lucas";
+		String testClientBirthDate = "22-07-2001";
+		Client client = new Client(testClientName, testClientBirthDate);
+
+		when(clientRepository.findById(1L)).thenReturn(Optional.of(client));
+
+		// Realizando a requisição GET
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/client/1"))
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andReturn();
+
+		// Convertendo a resposta em JSON para objeto
+		String jsonResponse = result.getResponse().getContentAsString();
+		ObjectMapper mapper = new ObjectMapper();
+		Client returnedClient = mapper.readValue(jsonResponse, Client.class);
+
+		// Verificando se os dados do client retornado estão corretos
+		assertEquals(client.getName(), returnedClient.getName());
+		assertEquals(client.getBirthdate(), returnedClient.getBirthdate());
 	}
 }
