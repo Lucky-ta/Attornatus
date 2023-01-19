@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -20,6 +22,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.lucas.attornatus.entity.Client;
@@ -68,18 +71,64 @@ public class AttornatusApplicationTests {
 
 		when(clientRepository.findById(1L)).thenReturn(Optional.of(client));
 
-		// Realizando a requisição GET
 		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/client/1"))
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andReturn();
 
-		// Convertendo a resposta em JSON para objeto
 		String jsonResponse = result.getResponse().getContentAsString();
 		ObjectMapper mapper = new ObjectMapper();
 		Client returnedClient = mapper.readValue(jsonResponse, Client.class);
 
-		// Verificando se os dados do client retornado estão corretos
 		assertEquals(client.getName(), returnedClient.getName());
 		assertEquals(client.getBirthdate(), returnedClient.getBirthdate());
+	}
+
+	@Test
+	public void testGetAllClients() throws Exception {
+		List<Client> clients = Arrays.asList(
+				new Client("Lucas", "22-07-2001"),
+				new Client("Attornatus", "22-07-2001"));
+		when(clientRepository.findAll()).thenReturn(clients);
+
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/client"))
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andReturn();
+
+		String jsonResponse = result.getResponse().getContentAsString();
+
+		ObjectMapper mapper = new ObjectMapper();
+		List<Client> returnedClients = mapper.readValue(jsonResponse, new TypeReference<List<Client>>() {
+		});
+
+		assertEquals(2, returnedClients.size());
+		assertEquals("Lucas", returnedClients.get(0).getName());
+		assertEquals("22-07-2001", returnedClients.get(0).getBirthdate());
+		assertEquals("Attornatus", returnedClients.get(1).getName());
+		assertEquals("22-07-2001", returnedClients.get(1).getBirthdate());
+
+	}
+
+	@Test
+	public void testUpdateClient() throws Exception {
+		Client originalClient = new Client("Lucas", "22-07-2001");
+		when(clientRepository.findById(1L)).thenReturn(Optional.of(originalClient));
+
+		Client updatedClient = new Client("Maieski", "22-07-2001");
+		when(clientRepository.save(updatedClient)).thenReturn(updatedClient);
+
+		ObjectMapper mapper = new ObjectMapper();
+		byte[] jsonContent = mapper.writeValueAsBytes(updatedClient);
+
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/client/1")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(jsonContent))
+				.andExpect(MockMvcResultMatchers.status().isOk())
+				.andReturn();
+
+		String jsonResponse = result.getResponse().getContentAsString();
+		Client returnedClient = mapper.readValue(jsonResponse, Client.class);
+
+		assertEquals(updatedClient.getName(), returnedClient.getName());
+		assertEquals(updatedClient.getBirthdate(), returnedClient.getBirthdate());
 	}
 }
